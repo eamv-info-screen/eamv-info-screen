@@ -1,7 +1,7 @@
 ## EAMV info screen summary
 
 School assignment for creating a ASP.NET Web Forms app. Together with my teammates 
-[Juyoung](https://github.com/unicojoyhu), [Dennis](https://github.com/zeltres) and [Jonas](https://github.com/Shadowsilver64) we developed the app 
+[Juyoung](https://github.com/unicojoyhug), [Dennis](https://github.com/zeltres) and [Jonas](https://github.com/Shadowsilver64) we developed the app 
 in tree one week sprints using Scrum, XP and Kanban. The functionality of the app is to provide school's administration a modern UI for basic 
 management of academy's daily activities.
 Academy's head of administration chose our app among 2 others to go live 
