@@ -1,0 +1,10 @@
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Entities\bin\Debug\Entities.dll
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Entities\bin\Debug\Entities.pdb
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Entities\bin\Debug\Utils.dll
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Entities\bin\Debug\Utils.pdb
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Entities\obj\Debug\Entities.dll
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Entities\obj\Debug\Entities.pdb
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Entities\bin\Debug\FluentScheduler.dll
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Entities\bin\Debug\FluentScheduler.pdb
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Entities\bin\Debug\FluentScheduler.xml

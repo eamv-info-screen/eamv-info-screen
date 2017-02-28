@@ -1,0 +1,5 @@
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Utils\bin\Debug\Utils.dll
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Utils\bin\Debug\Utils.pdb
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Utils\obj\Debug\Utils.csprojResolveAssemblyReference.cache
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Utils\obj\Debug\Utils.dll
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Utils\obj\Debug\Utils.pdb

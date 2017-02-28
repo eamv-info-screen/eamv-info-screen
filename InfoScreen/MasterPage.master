@@ -1,0 +1,329 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-flatly.css" />
+        <link rel="stylesheet" type="text/css" href="css/sweetalert.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16" />
+        <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="theme-color" content="#ffffff" />
+        <script src="js/weeknumber.js" type="text/javascript"></script>
+        <%-- Sweet alert --%>
+        <script src="js/sweetalert.min.js"></script>
+    </asp:ContentPlaceHolder>
+</head>
+<body onload="startTime()">
+    <form id="form" runat="server">
+        <header>
+            <asp:ContentPlaceHolder ID="header" runat="server">
+                <div class="logo-wrapper header-bg">
+                    <div class="clock-wrapper">
+                        <span>kl. </span><span id="clock"></span>
+                        <br />
+                        <asp:ScriptManager ID="ScriptManager" runat="server" />
+                        <asp:Timer ID="DateTimer" runat="server" Interval="10000" OnTick="UpdateDate"></asp:Timer>
+                        <asp:UpdatePanel ID="UpdatePanel" UpdateMode="Conditional" runat="server">
+                            <Triggers>
+                                <asp:AsyncPostBackTrigger ControlID="DateTimer" EventName="Tick" />
+                            </Triggers>
+                            <ContentTemplate>
+                                <span id="date" runat="server"><%# today %></span>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </div>
+                    <img src="images/logo.png" alt="Eamv Logo" img align="right" width="451" height="86" />
+                </div>
+            </asp:ContentPlaceHolder>
+        </header>
+        <asp:ContentPlaceHolder ID="menu" runat="server">
+            <nav class="col-md-10 col-lg-offset-1">
+                <ul class="nav nav-pills">
+                    <li><a href="AddEvent.aspx">Opret Aktivitet</a></li>
+                    <li><a href="Search.aspx">Søg Aktiviteter</a></li>
+                    <li><a href="InformationManagement.aspx">Informationshåndtering</a></li>
+                    <li><a href="ScreenPreviewChecker.aspx">Se infoskærm</a></li>
+                    <li>
+                        <div class="btn-group">
+                            <span class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rumhåndtering <span class="caret"></span>
+                            </span>
+                            <ul class="dropdown-menu">
+                                <li><a href="AddRoom.aspx">Opret lokale</a></li>
+                                <li><a href="RoomOverview.aspx">Lokaleoversigt</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="btn-group">
+                            <span class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Afd. håndtering <span class="caret"></span>
+                            </span>
+                            <ul class="dropdown-menu">
+                                <li><a href="AddDepartment.aspx">Opret Afdeling</a></li>
+                                <li><a href="DepartmentOverview.aspx">Afd. Oversigt</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <% if (Roles.GetRolesForUser().Contains("Admin")) { %>
+                    <li>
+                        <div class="btn-group">
+                            <span class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bruger håndtering <span class="caret"></span>
+                            </span>
+                            <ul class="dropdown-menu">
+                                <li><a href="CreateUser.aspx">Opret Bruger</a></li>
+                                <li><a href="UserOverview.aspx">Bruger Oversigt</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <%} %>
+                </ul>
+            </nav>
+        </asp:ContentPlaceHolder>
+        <div class="main-content" runat="server">
+            <asp:ContentPlaceHolder ID="main" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <footer>
+        <asp:ContentPlaceHolder ID="footer" runat="server">
+            <script>
+                function startTime() {
+                    var today = new Date();
+                    var h = today.getHours();
+                    var m = today.getMinutes();
+                    var s = today.getSeconds();
+                    m = checkTime(m);
+                    s = checkTime(s);
+                    document.getElementById('clock').innerHTML =
+                    h + ":" + m;
+                    var t = setTimeout(startTime, 500);
+                }
+                function checkTime(i) {
+                    if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+                    return i;
+                }
+            </script>
+
+            <script type='text/javascript' src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+            <script>
+                $(document).ready(function () {
+                    var timepickerStart, timepickerEnd, startTime, endTime;
+                    timepickerStart = $('.timepickerStart');
+                    timepickerEnd = $('.timepickerEnd');
+                    startTime = (timepickerStart.val() != "") ? timepickerStart.val() : "08:00";
+                    endTime = (timepickerEnd.val() != "") ? timepickerEnd.val() : "08:00";
+
+                    timepickerStart.timepicker({
+                        timeFormat: 'HH:mm',
+                        interval: 15,
+                        defaultTime: startTime,
+                        minTime: '07',
+                        maxTime: '23:59',
+                        startTime: startTime,
+                        dynamic: false,
+                        dropdown: true,
+                        scrollbar: true
+                    });
+                    timepickerEnd.timepicker({
+                        timeFormat: 'HH:mm',
+                        interval: 15,
+                        defaultTime: endTime,
+                        minTime: '07',
+                        maxTime: '23:59',
+                        startTime: endTime,
+                        dynamic: false,
+                        dropdown: true,
+                        scrollbar: true
+                    });
+                });
+            </script>
+            <script>
+                $(document).ready(function () {
+                     //Fetch activities every 10 seconds...
+                    setInterval(function () {
+                        $(".events-table").load(location.pathname + location.search + " .events-table");
+                    }, 10000);
+
+                    // Find the nav link corresponding to current page and add class active to it.
+                    var urlPath = window.location.pathname.split("/").pop();
+                    $(".nav a").each(function (index, item) {
+                        var _item = $(item)
+                        if (_item.attr("href") == urlPath) {
+                            _item.parent().addClass("active");
+                            // If the li item is descendant of another li item.
+                            // li > .btn-group > .dropdown-menu > li.active > _item
+                            var parent = _item.parent().parent().parent().parent();
+                            if (parent.prop("tagName") === "LI") {
+                                parent.find(".btn").addClass("active");
+                            }
+                        }
+                    });
+                });
+
+                function submitForm() {
+                    $("#form").submit();
+                }
+            </script>
+            <script src="js/bootstrap-select.min.js"></script>
+            <script>
+                (function ($) {
+                    var deleteEventButton, deleteInformationButton, deleteDepartmentButton, deleteUserButton;
+
+                    $(".btnDeleteEvent").on("click", function (event) {
+                        event.stopPropagation();
+                        deleteEventButton = $(this);
+                        swal({
+                            title: "Er du sikker?",
+                            text: "Aktiviteten vil blive slettet permenent!",
+                            type: "warning",
+                            showCancelButton: true,
+                            customClass: "deleteConfirmationModal",
+                            confirmButtonColor: "#DD6B55",
+                            confirmButtonText: "Ja, slet den",
+                            closeOnConfirm: true
+                        },
+                        function (isConfirm) {
+                            if (isConfirm) {
+                                window.location = deleteEventButton.attr("href");
+
+                            }
+                        });
+                        return false;
+                    });
+
+
+                    $(".btnDeleteInformation").on("click", function (event) {
+                        event.stopPropagation();
+                        deleteInformationButton = $(this);
+                        swal({
+                            title: "Er du sikker?",
+                            text: "Informationen vil blive fjernet permenent!",
+                            type: "warning",
+                            showCancelButton: true,
+                            customClass: "deleteConfirmationModal",
+                            confirmButtonColor: "#DD6B55",
+                            confirmButtonText: "Ja, fjern den",
+                            closeOnConfirm: true
+                        },
+                        function (isConfirm) {
+                            if (isConfirm) {
+                                window.location = deleteInformationButton.attr("href");
+
+                            }
+                        });
+                        return false;
+                    });
+
+                    $(".btnDeleteRoom").on("click", function (event) {
+                        event.stopPropagation();
+                        deleteRoomButton = $(this);
+                        swal({
+                            title: "Er du sikker?",
+                            text: "Lokalet vil blive slettet permenent!",
+                            type: "warning",
+                            showCancelButton: true,
+                            customClass: "deleteConfirmationModal",
+                            confirmButtonColor: "#DD6B55",
+                            confirmButtonText: "Ja, slet den",
+                            closeOnConfirm: true
+                        },
+                        function (isConfirm) {
+                            if (isConfirm) {
+                                window.location = deleteRoomButton.attr("href");
+
+                            }
+                        });
+                        return false;
+                    });
+
+                    $(".btnDeleteDepartment").on("click", function (event) {
+                        event.stopPropagation();
+                        deleteDepartmentButton = $(this);
+                        swal({
+                            title: "Er du sikker?",
+                            text: "Afdelingen vil blive fjernet permenent!",
+                            type: "warning",
+                            showCancelButton: true,
+                            customClass: "deleteConfirmationModal",
+                            confirmButtonColor: "#DD6B55",
+                            confirmButtonText: "Ja, fjern den",
+                            closeOnConfirm: true
+                        },
+                        function (isConfirm) {
+                            if (isConfirm) {
+                                window.location = deleteDepartmentButton.attr("href");
+
+                            }
+                        });
+                        return false;
+                    });
+
+                    $(".btnDeleteUser").on("click", function (event) {
+                        event.stopPropagation();
+                        deleteUserButton = $(this);
+                        swal({
+                            title: "Er du sikker?",
+                            text: "Brugeren vil blive slettet permenent!",
+                            type: "warning",
+                            showCancelButton: true,
+                            customClass: "deleteConfirmationModal",
+                            confirmButtonColor: "#DD6B55",
+                            confirmButtonText: "Ja, fjern den",
+                            closeOnConfirm: true
+                        },
+                        function (isConfirm) {
+                            if (isConfirm) {
+                                window.location = deleteUserButton.attr("href");
+
+                            }
+                        });
+                        return false;
+                    });
+
+                    // Rooms and event repetition selects listener
+                    $("#main_roomsSelect, #main_eventRepetitionSelect").each(function () {
+                        var value = "0";
+                        $(this).on("changed.bs.select", function (e, clickedIndex, newValue, oldValue) {
+                            e.preventDefault();
+                            var selectedValues = $(this).val();
+                            if (selectedValues !== null && selectedValues.length > 0) {
+                                if (clickedIndex == 0) {
+                                    if (newValue === true) {
+                                        if ($(this).attr("id") == "main_roomsSelect") {
+                                            value = selectedValues[0];
+                                        }
+                                        $(this).selectpicker("val", value);
+                                    }
+                                } else {
+                                    console.log(value);
+                                    if (selectedValues.indexOf(value) !== -1) {
+                                        selectedValues.shift();
+                                        console.log(selectedValues);
+                                        $(this).selectpicker("val", selectedValues);
+                                    }
+                                }
+                            }
+                            return false;
+                        });
+                    });
+
+                }(jQuery));
+            </script>
+
+
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="extraScripts" runat="server">
+        </asp:ContentPlaceHolder>
+    </footer>
+</body>
+</html>

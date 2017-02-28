@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DeleteEvent.aspx.cs" Inherits="DeleteEvent" %>

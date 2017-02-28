@@ -1,0 +1,12 @@
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Repositories\bin\Debug\Repositories.dll
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Repositories\bin\Debug\Repositories.pdb
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Repositories\bin\Debug\Entities.dll
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Repositories\bin\Debug\Utils.dll
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Repositories\bin\Debug\Entities.pdb
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Repositories\bin\Debug\Utils.pdb
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Repositories\obj\Debug\Repositories.csprojResolveAssemblyReference.cache
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Repositories\obj\Debug\Repositories.dll
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Repositories\obj\Debug\Repositories.pdb
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Repositories\bin\Debug\FluentScheduler.dll
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Repositories\bin\Debug\FluentScheduler.pdb
+C:\Users\tsvetelintsonev\Google Drive\Projects\C#\InfoScreen\Repositories\bin\Debug\FluentScheduler.xml

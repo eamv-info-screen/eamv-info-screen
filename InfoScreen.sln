@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "InfoScreen", "InfoScreen", "{F1E2DE5A-4F31-42F0-84E1-2E35B8BD6B5A}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		ProjectReferences = "{a8483024-0223-4e14-a4c9-18d717063597}|Utils.dll;{90d8b4f8-19cc-4880-b82f-fa59271e4a3b}|Entities.dll;{1d00ee44-6971-460b-9b8c-dbdf1fc7d8b3}|Repositories.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_53334"
+		Debug.AspNetCompiler.PhysicalPath = "InfoScreen\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53334\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_53334"
+		Release.AspNetCompiler.PhysicalPath = "InfoScreen\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53334\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "53334"
+		SlnRelativePath = "InfoScreen\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{A8483024-0223-4E14-A4C9-18D717063597}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{90D8B4F8-19CC-4880-B82F-FA59271E4A3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{1D00EE44-6971-460B-9B8C-DBDF1FC7D8B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{235E0DE5-4482-4481-B205-D32CC6D4081A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1E2DE5A-4F31-42F0-84E1-2E35B8BD6B5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E2DE5A-4F31-42F0-84E1-2E35B8BD6B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E2DE5A-4F31-42F0-84E1-2E35B8BD6B5A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E2DE5A-4F31-42F0-84E1-2E35B8BD6B5A}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{A8483024-0223-4E14-A4C9-18D717063597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8483024-0223-4E14-A4C9-18D717063597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8483024-0223-4E14-A4C9-18D717063597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8483024-0223-4E14-A4C9-18D717063597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90D8B4F8-19CC-4880-B82F-FA59271E4A3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90D8B4F8-19CC-4880-B82F-FA59271E4A3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90D8B4F8-19CC-4880-B82F-FA59271E4A3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90D8B4F8-19CC-4880-B82F-FA59271E4A3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D00EE44-6971-460B-9B8C-DBDF1FC7D8B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D00EE44-6971-460B-9B8C-DBDF1FC7D8B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D00EE44-6971-460B-9B8C-DBDF1FC7D8B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D00EE44-6971-460B-9B8C-DBDF1FC7D8B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{235E0DE5-4482-4481-B205-D32CC6D4081A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{235E0DE5-4482-4481-B205-D32CC6D4081A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{235E0DE5-4482-4481-B205-D32CC6D4081A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{235E0DE5-4482-4481-B205-D32CC6D4081A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://93.162.44.202:28080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Entities\\Entities.csproj
+		SccProjectName1 = Entities
+		SccLocalPath1 = Entities
+		SccWebProject2 = true
+		SccProjectUniqueName2 = InfoScreen
+		SccProjectName2 = InfoScreen
+		SccLocalPath2 = InfoScreen
+		SccProjectEnlistmentChoice2 = 2
+		SccProjectUniqueName3 = Repositories\\Repositories.csproj
+		SccProjectName3 = Repositories
+		SccLocalPath3 = Repositories
+		SccProjectUniqueName4 = Utils\\Utils.csproj
+		SccProjectName4 = Utils
+		SccLocalPath4 = Utils
+		SccProjectUniqueName5 = UnitTest\\UnitTest.csproj
+		SccProjectName5 = UnitTest
+		SccLocalPath5 = UnitTest
+	EndGlobalSection
+EndGlobal
