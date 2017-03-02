@@ -2,9 +2,7 @@
 
 School assignment for creating a ASP.NET Web Forms app. 
 
-Together with my teammates [Juyoung](https://github.com/unicojoyhug), [Dennis](https://github.com/zeltres) and [Jonas](https://github.com/Shadowsilver64) , we developed this app in three one-week sprints using Scrum, XP and Kanban.
-
-The functionality of the app is to provide school's administration a modern UI for basic management of academy's daily activities. Academy's head of administration chose our app among 2 others to deploy and replace the old activity management system. The following is a full list of the functionalities we implemented:
+We developed this app in three one-week sprints using Scrum, XP and Kanban. The functionality of the app is to provide school's administration a modern UI for basic management of academy's daily activities. Academy's head of administration chose our app among 2 others to deploy and replace the old activity management system. The following is a full list of the functionalities we implemented:
 
 **1. User management**
 - Create user
